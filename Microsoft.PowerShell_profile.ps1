@@ -26,8 +26,14 @@ Set-Alias grep findstr
 # Set-Alias l lfcd
 
 
+# Open lfcd
 Set-PSReadLineKeyHandler -Chord Ctrl+o -ScriptBlock {
     [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
     [Microsoft.PowerShell.PSConsoleReadLine]::Insert('l.ps1')
     [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
 }
+
+# For LF File Manager
+$env:CGO_ENABLED = '0'
+$env:GO111MODULE = 'on'
+
