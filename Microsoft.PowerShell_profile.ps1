@@ -1,7 +1,8 @@
 # Prompt
 Import-Module oh-my-posh
 #oh-my-posh --init --shell pwsh --config ~/jandedobbeleer.omp.json | Invoke-Expression
-Set-PoshPrompt Paradox
+# Set-PoshPrompt Paradox
+Set-PoshPrompt bubbles
 
 
 # Icons
@@ -20,6 +21,7 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 
 # Alias
 Set-Alias vim nvim
+Set-Alias v nvim
 Set-Alias ll ls
 Set-Alias g git
 Set-Alias grep findstr
