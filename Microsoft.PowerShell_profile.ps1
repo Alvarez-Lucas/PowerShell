@@ -4,20 +4,20 @@ Import-Module oh-my-posh
 # Set-PoshPrompt Paradox
 Set-PoshPrompt spaceship
 
-
 # Icons
 Import-Module -Name Terminal-Icons
-
 
 # PSReadLine
 Set-PSReadLineOption -BellStyle None
 Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
 Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
 
+Set-PSReadLineKeyHandler -Key 'Ctrl+j' -Function NextHistory
+Set-PSReadLineKeyHandler -Key 'Ctrl+k' -Function PreviousHistory
 
 # FuzzyFinder
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
-
 
 # Alias
 Set-Alias vim nvim
@@ -26,7 +26,6 @@ Set-Alias ll ls
 Set-Alias g git
 Set-Alias grep findstr
 # Set-Alias l lfcd
-
 
 # Open lfcd
 Set-PSReadLineKeyHandler -Chord Ctrl+o -ScriptBlock {
