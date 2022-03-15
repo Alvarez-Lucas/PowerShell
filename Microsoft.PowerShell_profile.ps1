@@ -25,6 +25,7 @@ Set-Alias v nvim
 Set-Alias ll ls
 Set-Alias g git
 Set-Alias grep findstr
+Set-Alias e explorer.exe
 # Set-Alias l lfcd
 
 # Open lfcd
@@ -37,4 +38,3 @@ Set-PSReadLineKeyHandler -Chord Ctrl+o -ScriptBlock {
 # For LF File Manager
 $env:CGO_ENABLED = '0'
 $env:GO111MODULE = 'on'
-
