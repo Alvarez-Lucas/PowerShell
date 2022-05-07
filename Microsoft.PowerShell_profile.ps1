@@ -1,4 +1,5 @@
 # Prompt
+Import-Module posh-git
 Import-Module oh-my-posh
 #oh-my-posh --init --shell pwsh --config ~/jandedobbeleer.omp.json | Invoke-Expression
 # Set-PoshPrompt Paradox
@@ -17,6 +18,7 @@ Set-PSReadLineKeyHandler -Key 'Ctrl+j' -Function NextHistory
 Set-PSReadLineKeyHandler -Key 'Ctrl+k' -Function PreviousHistory
 
 # FuzzyFinder
+Import-Module PSFzf
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Alias
@@ -26,6 +28,7 @@ Set-Alias ll ls
 Set-Alias g git
 Set-Alias grep findstr
 Set-Alias e explorer.exe
+Set-Alias ff firefox.exe
 # Set-Alias l lfcd
 
 # Open lfcd
