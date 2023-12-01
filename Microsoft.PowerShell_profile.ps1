@@ -141,7 +141,7 @@ function Edit-Configs
     $program
   )
   Write-Output($program)
-  $selection = "Neovim", "Powershell", "Starship", "MPV" | gum filter --placeholder "Pick a program"
+  $selection = "Neovim", "Powershell", "Starship", "MPV", "GlazeWM" | gum filter --placeholder "Pick a program"
 
   switch ($selection)
   {
@@ -164,6 +164,12 @@ function Edit-Configs
     { 
       Set-Location C:\Users\lucas\AppData\Roaming\mpv
       nvim mpv.conf
+    }
+
+    "GlazeWM"
+    {
+      Set-Location C:\Users\lucas\.config\glazewm
+      nvim config.yaml
     }
     Default
     {
@@ -199,7 +205,6 @@ function mcd
   Set-Location -Path $Path
 }
 
-Import-Module Az.Tools.Predictor
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin
 
 
